@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionNewsPlainTextCell">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f2c-dQ-HWC">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VtO-Dx-wVq" userLabel="ResizeView">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udJ-5K-bKb">
+                                        <rect key="frame" x="8" y="8" width="34" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="udJ-5K-bKb" firstAttribute="top" secondItem="VtO-Dx-wVq" secondAttribute="top" constant="8" id="4ai-u0-0dM"/>
+                                    <constraint firstItem="udJ-5K-bKb" firstAttribute="leading" secondItem="VtO-Dx-wVq" secondAttribute="leading" constant="8" id="YHg-uX-wmK"/>
+                                    <constraint firstAttribute="bottom" secondItem="udJ-5K-bKb" secondAttribute="bottom" constant="8" id="ap6-0A-Syk"/>
+                                    <constraint firstAttribute="trailing" secondItem="udJ-5K-bKb" secondAttribute="trailing" constant="8" id="wGx-N5-DVw"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="VtO-Dx-wVq" secondAttribute="trailing" id="3Y7-05-lB3"/>
+                            <constraint firstItem="VtO-Dx-wVq" firstAttribute="top" secondItem="f2c-dQ-HWC" secondAttribute="top" id="DFD-jM-b2u"/>
+                            <constraint firstAttribute="bottom" secondItem="VtO-Dx-wVq" secondAttribute="bottom" id="Wkr-iW-K6V"/>
+                            <constraint firstItem="VtO-Dx-wVq" firstAttribute="leading" secondItem="f2c-dQ-HWC" secondAttribute="leading" id="aup-k3-QvP"/>
+                            <constraint firstAttribute="width" constant="50" id="zNh-k2-Z4l"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="f2c-dQ-HWC" secondAttribute="trailing" priority="999" id="GPW-yt-Un2"/>
+                <constraint firstItem="f2c-dQ-HWC" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="RoW-lq-GfH"/>
+                <constraint firstAttribute="bottom" secondItem="f2c-dQ-HWC" secondAttribute="bottom" id="aFh-vB-hlA"/>
+                <constraint firstItem="f2c-dQ-HWC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="yBw-Vb-f1U"/>
+            </constraints>
+            <size key="customSize" width="147" height="175"/>
+            <connections>
+                <outlet property="descriptionLabel" destination="udJ-5K-bKb" id="13F-Tp-5jk"/>
+                <outlet property="maxWidthConstraint" destination="zNh-k2-Z4l" id="L69-N7-ZTN"/>
+            </connections>
+            <point key="canvasLocation" x="150" y="139.62053571428569"/>
+        </collectionViewCell>
+    </objects>
+</document>

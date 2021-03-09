@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="D8k-1O-VvX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="1IX-Cj-A77">
+            <objects>
+                <navigationController id="D8k-1O-VvX" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ePg-Xm-QLv">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ucC-3z-5Ul" kind="relationship" relationship="rootViewController" id="wb7-MM-f7d"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QWp-kc-IwQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-396" y="47"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="33l-hM-aJp">
+            <objects>
+                <viewController id="ucC-3z-5Ul" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ap3-Ud-N2q">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CollectionViw" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vvt-jU-Cga">
+                                <rect key="frame" x="0.0" y="449" width="414" height="52"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="ece-Tz-y2i"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P6y-W5-IkU">
+                                <rect key="frame" x="0.0" y="503" width="414" height="52"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="PlainText List">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onCollectionViewPlainTextList:" destination="ucC-3z-5Ul" eventType="touchDown" id="Fb4-ia-atN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWN-jK-af9">
+                                <rect key="frame" x="0.0" y="557" width="414" height="52"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Single Image List">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onCollectionViewOneImageList:" destination="ucC-3z-5Ul" eventType="touchDown" id="ZyO-Lp-Lfx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="esr-Ol-HMV">
+                                <rect key="frame" x="0.0" y="611" width="414" height="52"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Text And Image List">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onCollectionViewTextAndImageList:" destination="ucC-3z-5Ul" eventType="touchDown" id="GJj-Cr-ssD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7hz-u7-H6Q"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="P6y-W5-IkU" firstAttribute="top" secondItem="Vvt-jU-Cga" secondAttribute="bottom" constant="2" id="12R-tY-bbm"/>
+                            <constraint firstItem="rWN-jK-af9" firstAttribute="width" secondItem="P6y-W5-IkU" secondAttribute="width" id="1e0-ol-xek"/>
+                            <constraint firstItem="P6y-W5-IkU" firstAttribute="height" secondItem="Vvt-jU-Cga" secondAttribute="height" id="Gaj-g9-qZ0"/>
+                            <constraint firstItem="Vvt-jU-Cga" firstAttribute="centerY" secondItem="7hz-u7-H6Q" secondAttribute="centerY" id="SB6-GB-ibu"/>
+                            <constraint firstItem="esr-Ol-HMV" firstAttribute="centerX" secondItem="rWN-jK-af9" secondAttribute="centerX" id="U5A-Kz-Pb5"/>
+                            <constraint firstItem="rWN-jK-af9" firstAttribute="top" secondItem="P6y-W5-IkU" secondAttribute="bottom" constant="2" id="Zcf-c8-8Re"/>
+                            <constraint firstItem="esr-Ol-HMV" firstAttribute="top" secondItem="rWN-jK-af9" secondAttribute="bottom" constant="2" id="b8A-84-JYW"/>
+                            <constraint firstItem="rWN-jK-af9" firstAttribute="height" secondItem="P6y-W5-IkU" secondAttribute="height" id="fee-91-9W5"/>
+                            <constraint firstItem="Vvt-jU-Cga" firstAttribute="width" secondItem="ap3-Ud-N2q" secondAttribute="width" id="gPz-Ug-Wyb"/>
+                            <constraint firstItem="rWN-jK-af9" firstAttribute="centerX" secondItem="P6y-W5-IkU" secondAttribute="centerX" id="idw-QT-bVs"/>
+                            <constraint firstItem="P6y-W5-IkU" firstAttribute="width" secondItem="Vvt-jU-Cga" secondAttribute="width" id="jDX-lX-G3h"/>
+                            <constraint firstItem="P6y-W5-IkU" firstAttribute="centerX" secondItem="Vvt-jU-Cga" secondAttribute="centerX" id="jPh-EO-1Bg"/>
+                            <constraint firstItem="Vvt-jU-Cga" firstAttribute="centerX" secondItem="7hz-u7-H6Q" secondAttribute="centerX" id="p7x-PC-zOF"/>
+                            <constraint firstItem="esr-Ol-HMV" firstAttribute="height" secondItem="rWN-jK-af9" secondAttribute="height" id="q55-bK-ODl"/>
+                            <constraint firstItem="esr-Ol-HMV" firstAttribute="width" secondItem="rWN-jK-af9" secondAttribute="width" id="r4x-xJ-LSM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ogU-q4-zI0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tC4-ej-jq6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="371" y="47"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
